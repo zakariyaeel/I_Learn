@@ -1,0 +1,7 @@
+#if( someChar >= 'a' && someChar <= 'z'){
+#       someChar -= 32;
+#} else {
+#        someChar += 32;
+#}
+
+(someChar >= 'a' && someChar <= 'z') ? (someChar -= 32) : (someChar += 32);
