@@ -1,0 +1,18 @@
+int period = 5;
+float amount = 5500;
+float rate = 0;
+
+rate = switch (period) {
+	case 1, 2, 3 -> 0.1F;
+	case 4, 5, 6 -> 0.08F;
+	case 7, 8, 9, 10 -> 0.07F;
+	default -> 0.06F;
+};
+
+float simpleInterest = amount * period * rate;
+
+amount += switch (period){
+	case 1,2,3,4,5 : yield simpleInterest - 100.00F;
+	case 6,7,8,9,10 : yield simpleInterest - 150.00F;
+	default : yield simpleInterest - 200.00F;
+};
