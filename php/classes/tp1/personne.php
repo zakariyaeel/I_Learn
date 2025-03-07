@@ -25,13 +25,14 @@ class Personne{
     }
 
     // Setters
-    public function affectID(int $id){
+    public function affectID(int $id):self{
         $this->id = $id;
+        return $this;
     }
-    public function settNom(String $nom){
+    public function settNom(String $nom):void{
         $this->nom = $nom;
     }
-    public function setPrenom(String $prenom){
+    public function setPrenom(String $prenom):void{
         $this->prenom = $prenom;
     }
 }
